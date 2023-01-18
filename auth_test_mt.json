@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ce-cxmo-mom-test-01",
+  "private_key_id": "6d6ebc46ff37eb4d552aad64101fea82003ca361",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIC/DCCAeSgAwIBAgIIUxtexMRmvv8wDQYJKoZIhvcNAQEFBQAwIDEeMBwGA1UE\nAxMVMTA3MTM4OTUxMDYxOTc1NTA4NDg3MCAXDTIwMTExMTE3MjYxMloYDzk5OTkx\nMjMxMjM1OTU5WjAgMR4wHAYDVQQDExUxMDcxMzg5NTEwNjE5NzU1MDg0ODcwggEi\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5frxjgRi+UnNrwTr/OAGp4oZr\nZBp2cuaxPX1KrNP4NumYO7GTjYAtqZPozyKxQr7+ZpRd1LPOCJPtW/Ajw9r74R2s\nvCiI1P2cnLMuhbI7seZBmntFMsto1g+j1IEWxKEiMQiINOeSyCRLPfExQnTcJTx1\nNMpqBJLrctQ3bpeYW/oxMJVUk9qN8Vy2Df10974o5lYNj8z46/WjTVQHh6bkcyDe\nT7WYk/QIDDGtdWW7mloFvGnoNN2sPfSUSFZd80HxKqHUH4K23dfpCy96xgThhTTX\n8FVjeEXeAWJ9VuAxXKxuAhZEbG36wg1pfkNCllyAuzsLuYPPWS/iOt02B5uLAgMB\nAAGjODA2MAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBYGA1UdJQEB/wQM\nMAoGCCsGAQUFBwMCMA0GCSqGSIb3DQEBBQUAA4IBAQAR5R/YektLKhEoU33mchzp\n3d5mELvdlHzcW6StsGrn/xlgqyKQ05kzUInEdXKrcKToIaU9sxRTt+FKOXbovP7N\nUPsiBCb08sB5EPLAbLtJHcqbEQri5RsqiVSQWmr4bw+kv+YOgfEOKwFDcN6lw1eu\n47RxHxm0PCEFrSwAMrZgZ3MfUWHdgVQq2lYhM9ycvjMZuAhRxcF8RTvLcZA0ZTV7\nbqh1BSonPoSPIM4Yty+BRC1ywuoeWJw+aJDvsBmE0mSPlpmjLyzK7rVsrpj6Lwlj\nTiOSr28ZzhN5BpqrQNmJgcQWvrsjgu2deHqfK4JcFTejwBd78ApsXCtb75C2uKcu\n-----END PRIVATE KEY-----\n",
+  "client_email": "apigee-mom-test-mt-pubsub@ce-cxmo-mom-test-01.iam.gserviceaccount.com",
+  "client_id": "107138951061975508487",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/apigee-mom-test-mt-pubsub%40ce-cxmo-mom-test-01.iam.gserviceaccount.com"
+}

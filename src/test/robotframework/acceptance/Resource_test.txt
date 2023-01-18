@@ -1,0 +1,56 @@
+*** Variables ***
+${cxmo_outreach_poc}    cxmo-outreach-poc-dot-ce-cxmo-dev.uc.r.appspot.com
+${httpScheme}     https
+${httpPort}       443
+${project_id}     ce-cxmo-mom-test-01
+#${apigee_host}    https://amer-demo53-test.apigee.net    #demourl
+${apigee_host}    https://cx-nonprod-test.apigee.net    #cx-nonprodurl
+${mt_apigee_host}    cx-nonprod-test.apigee.net    #oldvalue-amer-demo53-test.apigee.net
+${mom_mo_apikey}    A5A1vYAsHgrqrPjaDwcXblzYaxlZnQuo    #oldvalue-vC3eDbofwqJ7Qy9ShN1dlqxzQ7pQ6RCg
+${mom_dispo_apikey}    CNNParUx4E1DvPHGOWtPebwqae5HbgJl    #oldvalue-ZKw54oG9NfbglSuTmCAAA9yk4Q9Bc0zv
+${internal_mt_proxy_apikey}    FyMBKTUr0cO6zyd3AJRMZtKdcpsQDwyB
+${mom_dispo_publisher}    /v1/mom-dispo-publisher    #oldmethodname-/mom-dispo-publisher
+${internal_mt_publisher}    /v1/send-sms-internal
+${mom_mo_publisher}    /v1/mom-mo-publisher    #oldvalue-/mom-mo-publisher
+${oauth_endpoint}    /oauth2-token-generator/accesstoken
+${mom_mt_publisher}    /v1/send-sms
+${mt_basic_auth}    blpxZlU4VlFSRXlJNnlKZDFLUDFnUFh2Z0FnRkdtMHc6Z2JtV3dDY05TVFZTRmlYcg==    #oldvalue-Y0NmeTBnMzNoa2lwWVZmSzNOSWszUWVZdkFpTlpxeXM6dVBqTGlKbTlMUTFJRXZBbw==
+${auth_json}      auth_test.json
+${auth_sms_sender}    authmomtest.json
+${app_id}         6946
+${phone_number}    4022015722
+${customer_phonenum}    14022815418
+${shortcode}      1212reg
+${updateshortcode}    0425reg
+${mom_keyword_shortcode}    202017
+${mom_paas_shortcode}    202012
+${non_existing_shortcode}    00090
+${clientId}       1
+${sender_address}    Fy4db1bd4RE9A665JjY4v6
+${aggregator}     SYNIVERSE
+${mo_router_shortcode_apikey}    11111
+${mo_router_shortcode_oAuth}    55555
+${mo_router_shortcode_1wayssl}    66666
+${mo_router_shortcode_JWT}    77777
+${mom_postback_url}    https://cx-nonprod-test.apigee.net/v1/mock-services
+#############Topics#################
+${mo_subscription_topic}    mom-mo-messages
+${dispo_subscription_topic}    mom-dispo-messages    #oldvaluemom-dispo-messages-test-sub
+${mt-sms-subscription_topic}    mom-mt-sms
+${mo_keyword_topic}    mom-mo-keyword-test
+${mo_paas_topic}    mom-mo-paas-test-sub
+${mo_final_billing_topic}    mom-mo-final-test-sub
+${mt_billing_topic}    mom-mt-sms-billing
+${morouter_subscription_topic}    mom-mo-messages
+##############CloudRunApp############
+${sms_sender_host}    mom-sms-sender-5fdcrsjqlq-uc.a.run.app
+${sms_sender_method}    /api/sms/send
+${mock_service}    mom-mock-services
+${sms_sender_service}    mom-sms-sender
+${keyword_responder_admin_host}    mom-keyword-responder-5fdcrsjqlq-uc.a.run.app
+${keyword_responder_admin_host_https}    https://mom-keyword-responder-5fdcrsjqlq-uc.a.run.app
+${keyword_responder_admin_service}    /api/keyword
+${get_all_shortcode}    /api/keyword/all
+${mo_router_host}    cx-nonprod-test.apigee.net
+${mo_router_method}    /v1/mo-router?apiKey=qb5rSMcP1GRrNQSHqyn4tTOG3QTt5QEs
+${mo_router_x-apikey}    ?apiKey=qb5rSMcP1GRrNQSHqyn4tTOG3QTt5QEs

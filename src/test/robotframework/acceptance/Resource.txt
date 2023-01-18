@@ -1,0 +1,198 @@
+*** Settings ***
+Library           Selenium2Library
+Library           Collections
+Library           requests
+Library           BuiltIn
+Library           Collections
+Library           SudsLibrary
+Library           String
+Library           RequestsLibrary
+Library           DateTime
+Library           ${CURDIR}/lib/stackdriver.py
+Library           ${CURDIR}/lib/gettoken.py
+Library           ${CURDIR}/lib/HTTP.py
+Library           ${CURDIR}/lib/encodetobase64.py
+Library           ${CURDIR}/lib/pubsub.py
+
+*** Keywords ***
+HttpGet
+    [Arguments]    ${Endpoint}    ${Method}
+    Create Http Context    ${Endpoint}    https
+    HTTP.GET    ${Method}
+    Log Response Body
+    Log Response Status
+    ${ResponseStatus}    Get Response Status
+    ${ResponseBody}    Get Response Body
+    [Return]    ${ResponseStatus}    ${ResponseBody}
+
+HttpsPost
+    [Arguments]    ${HOST}    ${RequestBody}    ${Method}    ${mo_apikey}
+    Create Session    my_session    ${HOST}    disable_warnings=1
+    ${headers}    Create Dictionary    Content-Type=application/json    x-apikey=${mo_apikey}
+    ${Response}    Post Request    my_session    ${Method}    headers=${headers}    data=${RequestBody}
+    [Return]    ${Response}
+
+ParseJSON
+    [Arguments]    ${Response.text}
+    ${json}    Evaluate    json.loads("""${Response.text}""")    json
+    ${messageIds}    Set Variable    ${json ['messageIds']}
+    Log To Console    ${messageIds}[0]
+    ${messageid}    Set Variable    ${messageIds}[0]
+    [Return]    ${messageid}
+
+ExtractNo
+    [Arguments]    ${Field1}
+    ${result1}    convert to string    ${Field1}
+    ${result2}=    Get Substring    ${result1}    2    -5
+    log    ${result2}
+    [Return]    ${result2}
+
+Mo Publisher
+    [Arguments]    ${jsonBody}=${defaultJsonRequest}    # If no arguments are given, defaults.
+    ${headerDict}=    Create Dictionary    Content-Type=application/json    x-apikey=${mom_mo_apikey}
+    Create Session    Publisher    ${apigee_host}    ${headerDict}    disable_warnings=1
+    Log    POST Request Headers: ${headerDict}
+    Log    POST Request Payload: ${jsonBody}
+    Log    POST Request Host: ${apigee_host}
+    Log    POST Request uri: ${mom_mo_publisher}
+    ${response}=    Post Request    Publisher    ${mom_mo_publisher}    data=${jsonBody}
+    Log    POST Response Status Code: ${response.status_code}
+    Log    POST Response text: ${response.text}
+    Run Keyword If    ${response.status_code} == 200    Log    Mo Published successfully.
+    ...    ELSE    Log    Mo was not Published successfully.
+    [Teardown]    Delete All Sessions    # Removes the sessions created by this Keyword.
+    [Return]    ${response}    # The response given from the call.
+
+Dispo Publisher
+    [Arguments]    ${jsonBody}=${defaultJsonRequest}    # If no arguments are given, defaults.
+    ${headerDict}=    Create Dictionary    Content-Type=application/json    x-apikey=${mom_dispo_apikey}
+    Create Session    Publisher    ${apigee_host}    ${headerDict}    disable_warnings=1
+    Log    POST Request Headers: ${headerDict}
+    Log    POST Request Payload: ${jsonBody}
+    Log    POST Request Host: ${apigee_host}
+    Log    POST Request uri: ${mom_dispo_publisher}
+    ${response}=    Post Request    Publisher    ${mom_dispo_publisher}    data=${jsonBody}
+    Log    POST Response Status Code: ${response.status_code}
+    Log    POST Response text: ${response.text}
+    Run Keyword If    ${response.status_code} == 200    Log    Dispo Published successfully.
+    ...    ELSE    Log    Dispo was not Published successfully.
+    [Teardown]    Delete All Sessions    # Removes the sessions created by this Keyword.
+    [Return]    ${response}    # The response given from the call.
+
+Keyword Responder Admin Apigee
+    [Arguments]    ${jsonBody}=${defaultJsonRequest}    # If no arguments are given, defaults.
+    ${headerDict}=    Create Dictionary    Content-Type=application/json    x-apikey=${keyword_responder_apikey}
+    Create Session    Create Shortcode    ${apigee_host}    ${headerDict}    disable_warnings=1
+    Log    POST Request Headers: ${headerDict}
+    Log    POST Request Payload: ${jsonBody}
+    Log    POST Request Host: ${apigee_host}
+    Log    POST Request uri: ${keyword_responder_admin}
+    ${response}=    Post Request    Create shortcode    ${keyword_responder_admin}    data=${jsonBody}
+    Log    POST Response Status Code: ${response.status_code}
+    Log    POST Response text: ${response.text}
+    Run Keyword If    ${response.status_code} == 204    Log    Shortcode and keyword created Successfully.
+    ...    ELSE    Log    Shortcode was not created Successfully.
+    [Teardown]    Delete All Sessions    # Removes the sessions created by this Keyword.
+    [Return]    ${response}    # The response given from the call.
+
+Keyword Responder Admin
+    [Arguments]    ${Endpoint}    ${RequestBody}    ${method}
+    Create Http Context    ${Endpoint}    https
+    Set Request Header    Content-Type    application/json
+    Set Request Header    Authorization    Bearer ${Bearer}
+    Set Request Body    ${RequestBody}
+    HTTP.POST    ${method}
+    Log Response Body
+    ${ResponseStatus}    Get Response Status
+    ${ResponseBody}    Get Response Body
+    Log    ${ResponseBody}
+    Log    ${ResponseStatus}
+    [Return]    ${ResponseStatus}    ${ResponseBody}
+
+Get Shortcode
+    [Arguments]    ${Endpoint}    ${Method}
+    ${headerDict}=    Create Dictionary    Authorization    Bearer ${Bearer}
+    Create Session    GetShortcode    ${Endpoint}    ${headerDict}    disable_warnings=1
+    ${response}=    Get Request    GetShortcode    ${Method}
+    Run Keyword If    ${response.status_code} == 200    Log    Shortcode found
+    ...    ELSE    Log    Shortcode was not found
+    [Return]    ${response}
+
+Delete Shortcode
+    [Arguments]    ${Endpoint}    ${Method}
+    ${headerDict}=    Create Dictionary    Authorization    Bearer ${Bearer}
+    Create Session    DeleteShortcode    ${Endpoint}    ${headerDict}    disable_warnings=1
+    ${response}=    Delete Request    DeleteShortcode    ${Method}
+    Run Keyword If    ${response.status_code} == 200    Log    Success
+    ...    ELSE    Log    Keyword-Response Combination not found for removal.
+    [Return]    ${response}
+
+Sms Sender
+    [Arguments]    ${Endpoint}    ${RequestBody}    ${method}
+    Create Http Context    ${Endpoint}    https
+    Set Request Header    Content-Type    application/json
+    Set Request Header    Authorization    Bearer ${Bearer}
+    Set Request Body    ${RequestBody}
+    HTTP.POST    ${method}
+    Log Response Body
+    ${ResponseStatus}    Get Response Status
+    ${ResponseBody}    Get Response Body
+    Log    ${ResponseBody}
+    Log    ${ResponseStatus}
+    [Return]    ${ResponseStatus}    ${ResponseBody}
+
+Mt Publisher
+    [Arguments]    ${Endpoint}    ${RequestBody}    ${method}
+    Create Http Context    ${Endpoint}    https
+    Set Request Header    Content-Type    application/json
+    Set Request Header    Authorization    Bearer ${access_token}
+    Set Request Body    ${RequestBody}
+    HTTP.POST    ${method}
+    Log Response Body
+    ${ResponseStatus}    Get Response Status
+    ${ResponseBody}    Get Response Body
+    Log    ${ResponseBody}
+    Log    ${ResponseStatus}
+    [Return]    ${ResponseStatus}    ${ResponseBody}
+
+MO Router
+    [Arguments]    ${Endpoint}    ${RequestBody}    ${method}
+    Create Http Context    ${Endpoint}    https
+    Set Request Header    Content-Type    application/json
+    Set Request Header    x-apikey    ${mo_router_x-apikey}
+    Set Request Body    ${RequestBody}
+    HTTP.POST    ${method}
+    Log Response Body
+    ${ResponseStatus}=    Get Response Status
+    ${ResponseBody}=    Get Response Body
+    Log    ${ResponseBody}
+    Log    ${ResponseStatus}
+    [Return]    ${ResponseStatus}    ${ResponseBody}
+
+Internal Mt Proxy
+    [Arguments]    ${Endpoint}    ${RequestBody}    ${method}
+    Create Http Context    ${Endpoint}    https
+    Set Request Header    Content-Type    application/json
+    Set Request Header    x-api-key    ${internal_mt_proxy_apikey}
+    Set Request Body    ${RequestBody}
+    HTTP.POST    ${method}
+    Log Response Body
+    ${ResponseStatus}    Get Response Status
+    ${ResponseBody}    Get Response Body
+    Log    ${ResponseBody}
+    Log    ${ResponseStatus}
+    [Return]    ${ResponseStatus}    ${ResponseBody}
+
+MMS SMS Sender
+    [Arguments]    ${Endpoint}    ${RequestBody}    ${method}
+    Create Http Context    ${Endpoint}    https
+    Set Request Header    Content-Type    application/json
+    Set Request Header    Authorization    Bearer ${access_token}
+    Set Request Body    ${RequestBody}
+    HTTP.POST    ${method}
+    Log Response Body
+    ${ResponseStatus}    Get Response Status
+    ${ResponseBody}    Get Response Body
+    Log    ${ResponseBody}
+    Log    ${ResponseStatus}
+    [Return]    ${ResponseStatus}    ${ResponseBody}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ce-cxmo-mom-test-01",
+  "private_key_id": "8872ceca0857d4bb33d07c711a1aa35c929b6cbf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC8gRzoapk/Hu0g\nkLGFfPi66OUlMVCWwtl33TtRT8mBAnLFVWsMaPBfESMr3H2ov/lG7AtQdKb69Ubd\n6rpsaOgRUAjL80sUPl4UQoaWFTAFgil/2VJdAM30RLWcDHqVPq3xHDGL5p74bP/6\nDdl62XpAiQ+HtE55q44mPZLrxWM0Cm6JZ0N+j+XiiYsWTKd2YXXPMtTBuas+lxUP\nUKoMR0HPCQFsG7AHDoj3D0gSTFQ9oTjK544wUgqKvg9I7va5CrXUfyrg88/cbpyN\nXLDxTb7Xj79QFabCFWQufIud/9gU9mxEaNCmqpusWArFRm0NszAIncOlOG1uVUyc\nQWVuQkRjAgMBAAECggEAGnnUn8I6eaFJiJ2PXs025DhfgtyifI0BMrLZ038Dhtaw\nsbhgcN2bsUaSFuWA/Wl6mh7/gdKN53P5evmD1e6FdcpfdJcx2uCITIvWz7qfGY72\nxDRiZe9TKLVZKqydWlvziLNp3sP1XQrLiIlXG/LywaCz6TQGd6lZraj6pe8okqo3\nWL5OzNfN0QPVbVRb8mXgIxqVZPnpAgv/9C4LWVdJo7qTLyDIr0cxVkL55mxVSoE8\nixiYTIlpy57IQoJZjOm+LR+Qsarho7s6dA/tNOcGgieaQwrGH3qVKicOPA67HhAn\nIyGriobWDcvXuUq9+JeJOaiy5Ew9DJaF6CMQWBF1+QKBgQDjQsFgelkx21UnJoB4\n3luiSlTM5rOaOiMwqCN9oPuiRst//mm/TsWJZ8IXMPqvPFN8om3amY+h7xeNbAjU\nyGQ4/uqCGMczPHY/tOjdyBaxWQrSBDTVi95j2YFWQACMhr5AbV9C7+2rS1CCrDhX\noa5w2Q1hCP5DWxSjsMS273QI6QKBgQDUV6xwl1ofEM4BCNkHIahMxxIukBYjJtPV\nHsmyGSHCF5V690iyl4kxd/7+lf1cTRbTFFTXH6j+XNOnPPAuHTlWyYunSZyFcz00\ncPbyz4HfaQSUTN+vr/HQ9mSZOvvKaM9izSya6gab/Z2UIJHXrjIcx6c2Xe9lv+K7\nOrHnb4dTawKBgQCzU7/H44NyhgJhjE4gEkX4f/L+ZKUgc/PEt0iaH2ewm3CFJTpI\njV3umQNczXdiw5WVaY6Jyla+jy3kmHU3gpEjMHPYCLlXQsSEbLq8FuFhPEP/iPYv\n89ierckTSBmmycRijmt3JGBEpH95PXCQJbLCtWOLSE9q0vosWJZBTB4h0QKBgQDP\nWX2txF3gkAxZvkYPTLKHpqz+gvza/oNETXgvTZNFcLorBWYb3xW9FKwP9m8dvrlX\nDTd7ihL/r62OVVdD8I2ZTd3tUVhiiBFwMA81M6RigK5UEm0rpefAYZoCdzKAiLBa\njnfMHlKt6I4Do3pG3ndY2y1RTZEEDshchAhNMv82WQKBgQCr4STDinA82P23Wr6W\n39cvAf2AylH0joWi7TFjPMJ6teRrq/h+Btd//+Qx22tHjvUKqQhXr317YymuZUzy\nkaBIo7Ndf9qeAJ+FWTkIdLCg4y/IU3XN9wy1GJM0AsOh5sfJfBcmv2vu+ZIMZRIs\nYeuI39mO7tL/KXnq7MP71W4X+w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "apigee-mom-test-mo-pubsub@ce-cxmo-mom-test-01.iam.gserviceaccount.com",
+  "client_id": "108833529463757000582",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/apigee-mom-test-mo-pubsub%40ce-cxmo-mom-test-01.iam.gserviceaccount.com"
+}

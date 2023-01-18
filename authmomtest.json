@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ce-cxmo-mom-test-01",
+  "private_key_id": "f3d048ecee71f76500ee35b773806a250d14f587",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC1jkM0dkoTXm2h\nJFyUs06htsq90Vjt7BMUo3LqLQFXtPO9t83ymXAA0jyuVlbOf0qPtmYUcz6JzhYM\n4AfSccMEKF6tKlQ7oh1/N3HAx/u0Pl44IcNvEJXwnLCB2uN059YOyPhhqx/XUIOP\nkzMcWHDNII+rsxhjdnh1Bw+DILZdO/Rcpy+tJbu1vvsJJ7D+8Wx1hcjQM5/kW2jJ\ndWfFJBNZCdMmyzpF8Q4BcX2/9V1yCv3I6u4gxaDNkOLM8MHBS1sQlK4PZfDum+9l\nQa/sZkupDAITw5f07sODc786UQZCb3ArXwWU77aAv1RJZZFUzgcBmi2fV4y+tdHM\nMhYZCTyFAgMBAAECggEAWdpC62thhM12f0pCIXvOPh17oE7D7tgnp06vODM212Pg\nP3QAkoCanGVwD63+PytjSNWyFovklwnuAsg7RszzgZLDLHtm/a5hX80eWJUAvrch\nJTGcidKRCmhZuKKOcJSubVnMB3ZMB2E7AysMIAqrJPHo+MZlmxAOVIi+hhyB9Ii6\na930mWIqZ7amgs0B8C6PBE3DXAJf6jBwbWvsivJZV44WOfzlieftouUVUzMgIpz+\nBeVrFbGKvCYf/6Y+oyRzsaa5bhtAnGcwxdmZVDXSAKIBXp5P2fpj2BAt4B5yS/zn\nRAJh4JQCRTkGmfODjtN4MwZ0fEOoFSj8XCS/CrNNnwKBgQDhwa9jJNSHCBOVTKgz\nbLuXEx9vwLThBc64ZbitSz045RzHB3nXyRfcqJTNOVN6qm2Cmd8wS/t3NyOCROV3\nliDaWNIpaV5Mdaqfi8AM+YeSr8NO+Gk81KAkQoHV9sYId+UzNG+aCCpc7HpXvm/s\nWNyObNDKDmml7NfkH0o6OduK3wKBgQDN4LXBhvcneYJibfrgksdSDHvv/C3zg5X6\nW70vvbCwwXo/c+iJQT/6ECzd/IMd8UjLQuicVkxW5xzhgYjXuDLHnEMJVhT5xuPM\nSaUQ5rrK7yxXNq4xn5fHNyhdQy1lGNTSyXeovkmXbvczOXodHD+WDphzCMrq+hCG\ndrt/7LhJGwKBgFcnpCM9c8MRriXEa2c3AhDn9An7tpjs2gq8UpisZF1TrlF0JGjX\nHJw2hQPZrs27f/2ck9qcat9ybQX8vS32yoYhJjmQkTQpdQ6VMDaSGvHZYyhYpKA0\nYgK9nkxRMdDRIK4s/yzTHC+1p+G6BpGTGMrvXYe0GrtQ/WP3ZHuoHIa3AoGAWjVX\n7pBgw18ujkp6XuRxibYGqETrLYQ+txBzePO48/oSwrLa9SkuCzgDMNFv8jLDHq0W\nl0oI8RsbQIQtnbgMKAKELRcW4csQDXdHaHxw5HKgDybadMvlCVlVymehAGc8+Y9l\nav7V6BCrKDrLEu5Jvkpu6hi0MPmZPBHSXl8u8HkCgYByRTKshe3MW5wY56Os0Vli\n7VvQsQYjkAFmD8Zk+2yfcjtR5fPLM7fyaAflfmJeeg3thV/JxA/UmnTQAhVzg5EL\naAM0qfOtaaRFPPK/lgvqlflejAz81YtgWrFjykBCw3FBUwBAf4XQ/9by1qKk4azl\nNeL6IPa7qkl0pEKxISYJaQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mom-sms-sender@ce-cxmo-mom-test-01.iam.gserviceaccount.com",
+  "client_id": "112148092076151121160",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mom-sms-sender%40ce-cxmo-mom-test-01.iam.gserviceaccount.com"
+}

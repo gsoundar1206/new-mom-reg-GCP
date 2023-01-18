@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ce-cxmo-mom-dev-01",
+  "private_key_id": "f08093799494d2bbdf0c8784391e65f77706607b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCUVmPF16zHc2vC\niq67K6DuHNchU0ezv2xLjjiUSKcbIhLyrU12Z3181glZcVWqh0cDUjGOgXHEkz91\nL5u7Uob+j40FdGFHvx7r6fu+A0n2PVsxqID1uMS7ev4x+upGLY/w51b+jpT8a6PD\nGNzfBl/g3WphW/LDNyAX7cNlBb+qW/6coyfEYFoZJH7H4UIsk5rzlbAs8s9ENnrD\n4hDclX719B2hYE4CxycdXHvC6ncqCS2h+8SzJkf/Ha7/t6tK3aLhomqIcAzhGjmT\n42g7wWKKiE1aIX9RtEHifjlYRDJjOhnYG59+kxuOk1UFm1a3icOtC5Y4t5oYNHl/\nJVeWBusFAgMBAAECggEAEA5pKVKcQfs/3aRw9RNBYv9zLTPHA0aunF+4xxrgH63o\nsCT1yWG6sbxh8bEKAqCMSBM/CFEBoAiyPzyCgQcV/qWfhZ4geN7P+YhFDBRuDpMl\n9QeWF0Lt5JSTwZQ1L0MiSANlJWkIk767pf63IFr1HjFz9jWONExEveJUxUbB2tja\nd6t4+p32CwXGnW2arjdP0L83yCiZRm9U5LUGKEyU89wSC/fAF++iFkLmfri32eZe\nWhdol6liI5B3ap9gbwp/psu/qAnQWwBYSBGmfAgTsRfRXSFR9rqt9EP7cnXOPHUB\nf+XTOTM1T7/qe56Z1Dk9R25JEx+eFyv4Wzkf7pSoRwKBgQDKHSJcrdGaQ+E0Bltt\nyB8xeRhRnz+dykL2rXXqjjFUcLbjBAkb/TvdQgxzaHf0Sckt9cVW2PpVcaR2+VyZ\nUOtI7IecGS0IwlOOUeULIPm9diMBwDS3OJ31XTMf7xqMM5ykFhcQGrjFiUtsT6lo\nfRQIlZsN+xf5/eCwLIonb8nrXwKBgQC74txUkqvcPZxkv/BkhWQa8xZo/9TiLbGx\nNTPEfCLEITozcyfJN199P9XXr0aXA8CZoVW14wCC2Fh7ZCxSlpsSiQmpEtF4VEfl\nD7OtpU/vFuEepmFs+AN6hDN0Q3vqfZFZHqlFnrJBFEqKgjE5ZjnLjCOIbKgqGQOP\n/xaEpbPoGwKBgFr4hhDlA6TFzMWX3uso2jFwaevDG+UvtrhFFv/+BGIXYZoIpPj+\nIEXUhrojWWqRE4YmSy5t9y8iOX57epxfeaeXHuq5wjVhEi7K2acKrp4CYHtXQeL+\nDsrzqiFDg9V7HZQVhUfwXx46T8JukLfBJJVAkUvXqtEQ3mMtiPl7LY1NAoGATS3W\nhiMt162zVauGqzQkN/HNLdqRb0uH55xMJJU9jsV7a/EM0doeLowPYqcMXzJaZoFg\nfPO/nQAT8LPohRB6qPWD82DYjQ5J7i0yCM2UdUk3tmhwMtv6SdSOcl7aQyvLjglL\nTV7wKE2WhSkP4V09toBdhEfmGEzoKrmFXX3X1isCgYARQirEf1/IBqaHFewuANyz\nD7rO5bGXpCkLrfYV2gsgAl/rn/K82s+XAg8ZvsdKd9Awsg+r3KOBpTmBNhMODryD\nXeb6t1OQrEhndiz9OTVbFxj9EzPyBnFDfYe/6vX+kUib5zoicGlNlJisQVIYMY18\nwOgffVAgrol2xrQ10Qxzkg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mom-regression-suite-sa@ce-cxmo-mom-dev-01.iam.gserviceaccount.com",
+  "client_id": "109190630544252378575",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mom-regression-suite-sa%40ce-cxmo-mom-dev-01.iam.gserviceaccount.com"
+}
